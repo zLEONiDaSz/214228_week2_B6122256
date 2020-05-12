@@ -1,0 +1,144 @@
+$bg-color:  linear-gradient(64deg, #191140 15%, #1B5EC6 85%);
+$bg-img:    linear-gradient(64deg, rgb(50, 73, 177) 15%, rgb(18, 9, 99) 85%);
+$bg-ct:     linear-gradient(10deg, #191140 15%, #1B5EC6 85%);
+$bg-list:   linear-gradient(10deg, #451f83 15%, rgb(176, 88, 248) 85%);
+$bg-hover:  linear-gradient(10deg, #ffffff 15%, rgb(4, 247, 255) 85%);
+$shadow-list-hover: 0px 30px 200px rgb(0, 81, 255), 0px 10px 10px rgb(24, 221, 247);
+$text-p-shadow:       2px 2px 5px rgba(0, 0, 0, 0.884);
+$text-p1-shadow:      2px 2px 5px rgba(24, 221, 247, 0.774);
+$text-p: 2px 2px 5px rgb(255, 255, 255);
+$bg-footer: linear-gradient(64deg, #191140 55%, rgb(255, 174, 81) 45%);
+$font1: italic bold 20px Georgia, serif;
+$font2: italic bold 15px/30px Georgia, serif;
+
+body{
+    background-image:  $bg-color;
+}
+
+.photo{
+    display: grid;
+    width: 100%;
+    height: 30%;
+    @include border-radius(10px);
+}
+
+.navigation{
+    display: grid;
+    background-image: $bg-img;
+    width: 100%;
+    @include border-radius(50px);
+    margin: 10px auto;
+    text-align: center;
+    letter-spacing: 40px;
+    text-shadow: 2px 2px 5px red;
+    color: wheat;
+    font: $font1;
+
+}
+
+.content{
+    display: grid;
+    background-image: $bg-ct;
+    width: 100%;
+    height: 50%;
+    margin: 20px auto;
+    @include border-radius(0px 0px 120px 800px);
+    .photocon{
+        margin: 10px auto;
+        width: 100%;
+        height: 95%;
+    }
+}
+
+.list{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: repeat(auto-fill, minmax(400px , 1fr));
+    margin: 20px auto;
+    padding: 0;
+    .list-item{
+        background-image: $bg-list;
+        list-style: none; 
+        @include border-radius(10px);
+        color: rgb(161, 161, 161);
+        height: 500px;
+        transition: 0.7s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            transform: translateY(-20px);
+            background-image: $bg-hover;
+            box-shadow: $shadow-list-hover;
+        }
+    }
+    p {
+        text-align: center;
+        padding: 0px 0px 0px 0px;
+        letter-spacing: 30px;
+        text-shadow: $text-p;
+        font-size: 100%;
+        color: rgba(68, 0, 255, 0.884);
+        transition: 0.2s;
+        transition-timing-function: ease-in-out;
+        font: $font1;
+        &:hover{
+            transform: scale(1.5);
+            text-shadow: $text-p-shadow;
+            color: black;
+        }
+    }
+    .p1{
+        display: block;
+        padding: 50px 60px;
+        letter-spacing: 2px;
+        font: $font2;
+        transition: 1.0s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+            text-shadow: $text-p1-shadow;
+            color: black;
+        }
+    }
+    .p2{
+        display: block;
+        padding: 50px 60px;
+        letter-spacing: 2px;
+        font: $font2;
+        transition: 1.0s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+            text-shadow: $text-p1-shadow;
+            color: black;
+        }
+    }
+    .p3{
+        display: block;
+        padding: 50px 60px;
+        letter-spacing: 2px;
+        font: $font2;
+        transition: 1.0s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+            text-shadow: $text-p1-shadow;
+            color: black;
+        }
+    }
+}
+
+.footer{
+    display: grid;
+    background-image: $bg-footer;
+    width: 100%;
+    height: 30%;
+    margin: 20px auto;
+
+    .phfooter{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 5px auto;
+        
+    }
+}
